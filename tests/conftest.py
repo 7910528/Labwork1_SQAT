@@ -6,7 +6,6 @@ from selenium.webdriver.edge.options import Options
 @pytest.fixture(scope="function")
 def driver():
     edge_options = Options()
-    edge_options.add_argument("--start-maximized")
     edge_options.add_argument("--headless")
     service = Service()
     driver = webdriver.Edge(service=service, options=edge_options)
